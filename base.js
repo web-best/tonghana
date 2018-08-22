@@ -19,6 +19,16 @@ $(document).ready(function(){
 		wrapperClass: 'bx-wrapper' // 얘가 없으면 안된다
 	});
 	
+	$('#abm-list').bxSlider({
+		slideWidth: 300,
+		minSlides: 3,
+    	maxSlides: 3,
+    	moveSlides: 1,
+    	slideMargin: 5,
+		pager: false,
+		wrapperClass: 'bx-wrapper2' // 얘가 없으면 안된다
+	});
+	
 	$(window).scroll(function(e) {
         
     });

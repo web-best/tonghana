@@ -1,4 +1,4 @@
-@charset utf-8;
+@charset "utf-8";
 *{box-sizing:border-box;}
 html,
 body,
@@ -35,7 +35,10 @@ a {
 	text-decoration: none;
 	color: black;
 }
-img{max-width: 100%;}
+img{
+	max-width: 100%;
+	outline:none;
+}
 
 .wrap {
 	max-width: 1200px;
@@ -124,11 +127,11 @@ img{max-width: 100%;}
 }
 
 #gnb li .submenu a {
-    font-size: 1em;
+    font-size: 0.833em;
     line-height: 2em;
 }
 
-#gnb:hover .submenu {
+#gnb > li:hover .submenu {
 	height: 213px;
 }
 
@@ -216,6 +219,7 @@ img{max-width: 100%;}
 
 #slide li {
 	float: left;
+	height:100%;
 }
 
 .contents {
@@ -251,27 +255,32 @@ img{max-width: 100%;}
 #gnb3 .con4 .movie-wrap iframe{
 	width:100%;
 }
-#gnb4::after {
+#abm-list::after {
     content: "";
     clear: both;
     display: block;
 }
-#gnb4 > li {
+#abm-list > li {
     float: left;
     width: 33.333%;
     padding:0 5px;
 }
-#gnb4 > li:last-child{
+#abm-list > li:last-child{
 	margin-right:0;
 }
 
-#gnb4 li a{
+#abm-list li a{
 	display:block;
 }
 
-#gnb4 li a img {
-    border-radius: 50%;
+/*#abm-list li a img {
     box-shadow: 0 0 8px 0px black;
+}*/
+#news-list li{
+	line-height:1.5em;
+}
+#news-list li .news-data{
+	float:right;
 }
 
 @media (max-width:767px){
@@ -279,11 +288,17 @@ img{max-width: 100%;}
 		width:100%;
 		padding:0;
 	}
+	#news-list li{
+		font-size:1em;
+	}
 }
 @media (min-width:768px){
 	#gnb3 > li{
 		width: 33.333%;
 		padding: 0 13px;
+	}
+	#news-list li{
+		font-size:0.8125em;
 	}
 }
 
@@ -292,14 +307,10 @@ img{max-width: 100%;}
     padding: 20px 0;
     color: white;
 }
-.footer h1 {
-    float: left;
-    width: 33.333%;
-}
-.footer .nav-wrap > div{
+/*.footer .nav-wrap > div{
 	float: left;
     width: calc(66.667% - 33.333%);
-}
+}*/
 .footer .company-wrap {
     padding: 16px 0;
 }
@@ -309,11 +320,42 @@ img{max-width: 100%;}
 .footer .sns {
     position: relative;
     text-align: center;
-    padding: 19px 0;
 }
 .footer .sns a {
-    float: left;
-    background-color: yellow;
+	display:inline-block;
+    background-color: white;
     border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: 6px;
+}
+.footer .sns a:first-child{
+	margin-left:0;
+}
+.footer .sns a:hover {
+    background-color: #cca7a4;
+}
+.footer .sns a i {
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    font-size: 1.3em;
+}
+@media (max-width:767px){
+	.footer{
+		text-align:center;
+	}
+}
+@media (min-width:768px){
+	.footer h1 {
+    	float: left;
+	}
+	.footer .company-wrap {
+		float:left;
+	}
+	.footer .sns{
+		float:right;
+		padding: 19px 0;
+	}
 }
 

@@ -22,9 +22,9 @@
     <!--fontawesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     
-    <link rel="stylesheet" href="jquery.bxslider.css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
     
-    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="css/common.css">
     
 </head>
 
@@ -54,6 +54,7 @@
                 </li>
                 <li>
                     <a href="#contents">NEWS</a>
+                    <div class="angle"></div>
                     <ul class="submenu">
                     	<li><a href="#none">공지사항</a></li>
                         <li><a href="#none">기사</a></li>
@@ -71,10 +72,13 @@
                 </li>
             </ul>
             <!--<div id="menu-bg"></div>-->
-            <div id="m-menu-btn">
-				<span class="line"></span>
-				<span class="line"></span>
-				<span class="line"></span>
+            <div id="toggleMenu">
+				<input type="checkbox" id="m-menu-btn">
+				<label for="m-menu-btn">
+					<span class="line"></span>
+					<span class="line"></span>
+					<span class="line"></span>
+                </label>
             </div>
             <div class="m-menu">
             	<ul id="m-gnb">
@@ -140,7 +144,7 @@
                 <li class="news">
                     <h3>NEWS</h3>
                     <ul id="news-list">
-                        <li><a href="#none"><span>통하나컴퍼니 공식 사이트가 새롭게 태어 났습니다.</span><span class="news-data">2018-08-03</span></a></li>
+                        <li><a href="#none"><span class="post-title">통하나컴퍼니 공식 사이트가 새롭게 태어 났습니다.</span><span class="news-data">2018-08-03</span></a></li>
                         <li><a href="#none"><span>통하나컴퍼니 공식 사이트가 새롭게 태어 났습니다.</span><span class="news-data">2018-08-03</span></a></li>
                         <li><a href="#none"><span>통하나컴퍼니 공식 사이트가 새롭게 태어 났습니다.</span><span class="news-data">2018-08-03</span></a></li>
                     </ul>
@@ -172,9 +176,9 @@
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="jquery.bxslider.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
     
-	<script src="base.js"></script>
+	<script src="js/base.js"></script>
     
 </body>
 

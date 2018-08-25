@@ -61,7 +61,6 @@ img{
 .nav-wrap{
 	width:80%;
 	margin:0 auto;
-	padding-top:6px;
 	/*padding:7px 0;*/
 }
 
@@ -73,6 +72,7 @@ img{
 
 .header h1 {
 	float: left;
+	margin-top:9px;
 	/*padding-top:3px;*/
 }
 
@@ -108,15 +108,41 @@ img{
 }
 
 #gnb > li > a {
-	padding:37px 0;
+	padding:40px 0;
+	font-weight:bold;
 }
-
-#gnb > li a:hover {
-	color: firebrick;
-}
-
 #gnb > li:hover > a {
-	color: gold;
+	color: #624D83;
+}
+/*
+.submenu 위 세모모양
+#gnb > li:hover a::before{
+	content:"";
+	position:absolute;
+	z-index:1000;
+	display:block;
+	width:0;
+	height:0;
+	border-color:transparent transparent blue transparent;
+	border-style:solid;
+	border-width:0 0 30px 0;
+	bottom:0;
+	left:0;
+}
+*/
+#gnb > li > a::after{
+	content:"";
+	display:block;
+	height:2px;
+	background-color:#624D83;
+	position:relative;
+	bottom:-2px;
+	width:0;
+	transition:width 0.5s;
+	margin:0 auto;
+}
+#gnb > li:hover > a::after{
+	width:45%;
 }
 #gnb li .submenu {
 	position: absolute;
@@ -152,6 +178,9 @@ img{
 #gnb li .submenu li{
 	border-bottom:1px solid gray;
 	background-color:black;
+}
+#gnb li .submenu li:last-child{
+	border-bottom:none;
 }
 #gnb li .submenu li:hover{
 	background-color:white;
@@ -250,10 +279,11 @@ input#m-menu-btn:checked + label > span:nth-child(2){
 	position: fixed;
 	display:none;
     top: 0;
-    left: 27%;
-    width: 100%;
+    right: 0;
+    width: 50%;
     height: 100%;
-    background-color: #52218A;
+    background-color: gray;
+	transition: right 0.8s;
 }
 
 #m-gnb{
@@ -264,6 +294,9 @@ input#m-menu-btn:checked + label > span:nth-child(2){
 }
 #m-gnb li a{
 	color:white;
+}
+#m-gnb li .submenu{
+	
 }
 
 @media (max-width:767px){
@@ -394,6 +427,7 @@ input#m-menu-btn:checked + label > span:nth-child(2){
 	background-color: #5F456C;
     padding: 20px 0;
     color: white;
+	text-align:center;
 }
 /*.footer .nav-wrap > div{
 	float: left;
@@ -402,8 +436,19 @@ input#m-menu-btn:checked + label > span:nth-child(2){
 .footer .company-wrap {
     padding: 16px 0;
 }
-.company-wrap p {
+.footer .company-wrap p {
     font-size: 0.8125em;
+	line-height:1.8em;
+}
+.footer .company-wrap p span{
+	padding: 0 10px;
+}
+.footer .company-wrap p span:first-child {
+    border-right: 1px solid white;
+    padding-left: 0;
+}
+.footer .company-wrap p span:last-child {
+    padding-right: 0;
 }
 .footer .sns {
     position: relative;

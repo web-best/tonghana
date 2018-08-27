@@ -62,6 +62,7 @@ img{
 	width:80%;
 	margin:0 auto;
 	/*padding:7px 0;*/
+	position:relative;
 }
 
 .nav-wrap::after{
@@ -214,9 +215,11 @@ img{
 
 /*모바일 gnb*/
 #toggleMenu{
-	float:right;
-	margin-top:30px;
+	margin-top:38px;
 	width:33px;
+	position:absolute;
+	z-index:5;
+	right:0;
 	
 	/*position:absolute;
 	right:1em;
@@ -232,13 +235,13 @@ img{
     transform: translateY(-50%);*/
 
 } /*toggleMenu는 input,label,div를 감싸고 있는 부모.*/
-input#m-menu-btn{
+#m-menu-btn{
 	display:none;
 }
-input#m-menu-btn + label{
+#m-menu-btn + label{
 	display:block;
 }
-input#m-menu-btn + label > span{
+#m-menu-btn + label > span{
 	display:block;
 	height:3px;
 	margin:4px auto;
@@ -247,18 +250,24 @@ input#m-menu-btn + label > span{
 	opacity:1;
 	/*width:90%;*/
 }
-input#m-menu-btn:checked + label > span:last-child{
+#m-menu-btn + label > span.on{
+	background-color:white; !important
+}
+#m-menu-btn:checked + label > span:last-child{
 	display:none;
 	opacity:0;
 }
-input#m-menu-btn:checked + label > span:first-child{
+#m-menu-btn:checked + label > span:first-child{
 	transform:rotate(45deg);
 	top:6px;
 	position:relative;
 }
-input#m-menu-btn:checked + label > span:nth-child(2){
+#m-menu-btn:checked + label > span:nth-child(2){
 	transform:rotate(-45deg);
 }
+
+
+
 
 /*#m-menu-btn {
     float: right;
@@ -283,28 +292,50 @@ input#m-menu-btn:checked + label > span:nth-child(2){
     width: 50%;
     height: 100%;
     background-color: gray;
-	transition: right 0.8s;
+	transition: all 0.8s;
 }
-
 #m-gnb{
-	
+	width: 100%; /*원래 너비 안받지만 width:100%를 넣었기에 부모한테 받는것이다.*/
+    transition: all 0.3s;
+    margin-top: 90px;
 }
 #m-gnb li{
-	
+	line-height:2em;
+	overflow:hidden;
 }
 #m-gnb li a{
+	display:block;
+	padding:0 1em;
+}
+#m-gnb li > a{
 	color:white;
 }
-#m-gnb li .submenu{
-	
+#m-gnb li a.on,
+#m-gnb > li:hover > a{
+	background-color:black;
+	color:white;
 }
-
+#m-gnb li .m-submenu{
+	display:none;
+	background-color: dimgray;
+	transition:all 0.5s;
+}
+#m-gnb li .m-submenu.open{
+	display:block; !important
+} /*선택자(click 등)가 없을때 .m-submenu에 중복이니까 !important를 꼭 넣어주기*/
+#m-gnb li .m-submenu a{
+	display:block;
+	color:white;
+}
 @media (max-width:767px){
 	#gnb{
 		display:none;
 	}
 	#toggleMenu{
 		display:block;
+	}
+	.header .nav-wrap .m-menu.open{
+		display:block; !important
 	}
 }
 @media (min-width:768px){
@@ -433,9 +464,6 @@ input#m-menu-btn:checked + label > span:nth-child(2){
 	float: left;
     width: calc(66.667% - 33.333%);
 }*/
-.footer .company-wrap {
-    padding: 16px 0;
-}
 .footer .company-wrap p {
     font-size: 0.8125em;
 	line-height:1.8em;
@@ -451,15 +479,14 @@ input#m-menu-btn:checked + label > span:nth-child(2){
     padding-right: 0;
 }
 .footer .sns {
-    position: relative;
     text-align: center;
 }
 .footer .sns a {
 	display:inline-block;
     background-color: white;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin-left: 6px;
 }
 .footer .sns a:first-child{
@@ -472,23 +499,37 @@ input#m-menu-btn:checked + label > span:nth-child(2){
     top: 50%;
     position: relative;
     transform: translateY(-50%);
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 @media (max-width:767px){
 	.footer{
 		text-align:center;
 	}
+	.footer .sns{
+		position:relative;
+	}
+	.footer .company-wrap {
+    	padding: 16px 0;
+	}
 }
 @media (min-width:768px){
 	.footer h1 {
     	float: left;
+		margin: 7px 24px 0 0;
 	}
 	.footer .company-wrap {
 		float:left;
+		padding: 25px 0;
 	}
 	.footer .sns{
-		float:right;
-		padding: 19px 0;
+		position:absolute;
+		z-index:2;
+		width:141px;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		/*float:right;
+		padding: 19px 0;*/
 	}
 }
 

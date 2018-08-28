@@ -68,14 +68,4 @@ $(document).ready(function(){
 		wrapperClass: 'bx-wrapper2' // 얘가 없으면 안된다
 	});
 	
-
-	
-	//$('#menu').click(function(){
-//		$(this).toggleClass({
-//            
-//        });
-//	});
-	
-	//$('.con-wrap').css('margin-top',$('.header').height());
-	
 });

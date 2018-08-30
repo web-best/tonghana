@@ -35,7 +35,7 @@ ul.bxslider {
   background: #fff;
 }*/
 .bx-wrapper{
-	height:45vw;
+	height:100%;
 }
 .bx-wrapper .bx-pager,
 .bx-wrapper .bx-controls-auto {
@@ -80,6 +80,10 @@ ul.bxslider {
 .bx-wrapper .bx-pager.bx-default-pager a:focus {
   background: lightskyblue;
 }
+.bx-wrapper .bx-pager.bx-default-pager a.active{
+	width:43px;
+}
+
 .bx-wrapper .bx-pager-item,
 .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
   display: inline-block;
@@ -94,7 +98,9 @@ ul.bxslider {
 /* DIRECTION CONTROLS (NEXT / PREV) */
 .bx-wrapper .bx-prev {
   left: 10px;
-  background: url('http://xhddlf12.dothome.co.kr/image/controls.png') no-repeat 0 -32px;
+  background: url('http://xhddlf12.dothome.co.kr/image/tonghana_uiux.png') no-repeat;
+  /*원래 bx-slider 위치*/
+  /*background: url('http://xhddlf12.dothome.co.kr/image/controls.png') no-repeat 0 -32px;*/
 }
 .bx-wrapper .bx-prev:hover,
 .bx-wrapper .bx-prev:focus {
@@ -102,21 +108,27 @@ ul.bxslider {
 }
 .bx-wrapper .bx-next {
   right: 10px;
-  background: url('http://xhddlf12.dothome.co.kr/image/controls.png') no-repeat -43px -32px;
+  background: url('http://xhddlf12.dothome.co.kr/image/tonghana_uiux.png') no-repeat -54px 0px;
+  /*원래 bx-slider 위치*/
+  /*background: url('http://xhddlf12.dothome.co.kr/image/controls.png') no-repeat -43px -32px;*/
 }
-.bx-wrapper .bx-next:hover,
+/*.bx-wrapper .bx-next:hover,
 .bx-wrapper .bx-next:focus {
   background-position: -43px 0;
-}
+}*/
 .bx-wrapper .bx-controls-direction a {
   position: absolute;
   top: 50%;
-  margin-top: -16px;
+  margin-top: -32.5px;
   outline: 0;
-  width: 32px;
-  height: 32px;
+  width: 37px;
+  height: 65px;
   text-indent: -9999px;
   z-index: 4;
+  /*원래bx-slider 크기, 위치*/
+  /*margin-top: -16px;
+  width: 32px;
+  height: 32px;*/  
 }
 .bx-wrapper .bx-controls-direction a.disabled {
   display: none;
@@ -272,15 +284,17 @@ ul.bxslider {
 /* DIRECTION CONTROLS (NEXT / PREV) */
 .bx-wrapper2 .bx-prev {
   left: 10px;
-  background: url('http://xhddlf12.dothome.co.kr/image/controls.png') no-repeat 0 -32px;
+  background: url('http://xhddlf12.dothome.co.kr/image/tonghana_uiux.png') no-repeat -257px 0px;
+  /*background: url('http://xhddlf12.dothome.co.kr/image/controls.png') no-repeat 0 -32px;*/
 }
-.bx-wrapper2 .bx-prev:hover,
+/*.bx-wrapper2 .bx-prev:hover,
 .bx-wrapper2 .bx-prev:focus {
   background-position: 0 0;
-}
+}*/
 .bx-wrapper2 .bx-next {
   right: 10px;
-  background: url('http://xhddlf12.dothome.co.kr/image/controls.png') no-repeat -43px -32px;
+  background: url('http://xhddlf12.dothome.co.kr/image/tonghana_uiux.png') no-repeat -281px 0px;
+  /*background: url('http://xhddlf12.dothome.co.kr/image/controls.png') no-repeat -43px -32px;*/
 }
 .bx-wrapper2 .bx-next:hover,
 .bx-wrapper2 .bx-next:focus {
@@ -289,12 +303,16 @@ ul.bxslider {
 .bx-wrapper2 .bx-controls-direction a {
   position: absolute;
   top: 50%;
-  margin-top: -16px;
+  margin-top: -16.5px;
   outline: 0;
-  width: 32px;
-  height: 32px;
+  width: 19px;
+  height: 33px;
   text-indent: -9999px;
   z-index: 4;
+  /*margin-top: -16px;
+  width: 32px;
+  height: 32px;*/
+  
 }
 .bx-wrapper2 .bx-controls-direction a.disabled {
   display: none;

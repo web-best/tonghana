@@ -49,7 +49,7 @@ $(document).ready(function(){
 
 	$('#slide').bxSlider({
 		auto: true,
-		autoControls: true,
+		autoControls: false,
 		stopAutoOnClick: true,
 		pager: true,
 		adaptiveHeight: false,

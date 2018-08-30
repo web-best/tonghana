@@ -102,10 +102,10 @@ ul.bxslider {
   /*원래 bx-slider 위치*/
   /*background: url('http://xhddlf12.dothome.co.kr/image/controls.png') no-repeat 0 -32px;*/
 }
-.bx-wrapper .bx-prev:hover,
+/*.bx-wrapper .bx-prev:hover,
 .bx-wrapper .bx-prev:focus {
   background-position: 0 0;
-}
+}*/
 .bx-wrapper .bx-next {
   right: 10px;
   background: url('http://xhddlf12.dothome.co.kr/image/tonghana_uiux.png') no-repeat -54px 0px;
@@ -296,10 +296,10 @@ ul.bxslider {
   background: url('http://xhddlf12.dothome.co.kr/image/tonghana_uiux.png') no-repeat -281px 0px;
   /*background: url('http://xhddlf12.dothome.co.kr/image/controls.png') no-repeat -43px -32px;*/
 }
-.bx-wrapper2 .bx-next:hover,
+/*.bx-wrapper2 .bx-next:hover,
 .bx-wrapper2 .bx-next:focus {
   background-position: -43px 0;
-}
+}*/
 .bx-wrapper2 .bx-controls-direction a {
   position: absolute;
   top: 50%;

@@ -40,7 +40,9 @@ img{
 	outline:none;
 	border:none;
 }
-
+iframe{
+    border-width: 0px;
+}
 .wrap {
 	max-width: 1200px;
 	margin: 0 auto;
